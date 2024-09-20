@@ -1,38 +1,140 @@
-.App {
-  text-align: center;
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 56px;
+}
+.hero {
+    background: url('https://img.hellofresh.com/w_3840,q_auto,f_auto,c_limit,fl_lossy/hellofresh_website/es/cms/SEO/recipes/gourmet/entrecot-de-ternera.jpeg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.reserve-section {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+
+.reserve-section h2 {
+    margin-bottom: 30px;
+}
+
+
+/* Estilos generales */
+.container {
+    max-width: 800px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  form {
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
   }
-  to {
-    transform: rotate(360deg);
+  
+  form:hover {
+    transform: scale(1.02); /* Añade un ligero efecto al pasar el ratón */
   }
-}
+  
+  label {
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1rem;
+  }
+  
+  input {
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  /* Placeholder color personalizado */
+  input::placeholder {
+    color: #bbb;
+  }
+  
+  /* Mejora del efecto de foco */
+  input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+  
+  button {
+    background: linear-gradient(135deg, #007bff, #0056d2);
+    padding: 12px 35px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+    transition: all 0.3s ease;
+  }
+  
+  /* Efecto hover en el botón */
+  button:hover {
+    background: linear-gradient(135deg, #0056d2, #003c9e);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.6);
+  }
+  
+  /* Estilos de los títulos */
+  h2 {
+    font-size: 2.5rem;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  
+  .invalid-feedback {
+    color: #d9534f;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 576px) {
+    h2 {
+      font-size: 2rem;
+    }
+  
+    button {
+      font-size: 1rem;
+      padding: 10px 25px;
+    }
+  }
+  
+  /* Estilo adicional para el contenedor */
+  #reservar {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: #f4f7fc;
+    border-radius: 20px;
+  }
+  
